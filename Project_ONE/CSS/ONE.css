@@ -1,0 +1,76 @@
+body {
+  /*   background-image: url(/HTML/Project_ONE/Royal.jpg); */
+  background-image: var(--wallpaper);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-gap: 10px;
+  transition: 0.5s;
+}
+/* Dark Mode */
+.dark-theme {
+  --main_color: #283048;
+  --wallpaper: url(../wallpepr/Zinc.jpg);
+}
+
+/*light Mode*/
+:root {
+  --main_color: #e9e4f0;
+  --wallpaper: url(../wallpepr/Royal.jpg);
+}
+
+.swbtn {
+  height: 35px;
+}
+
+.navbar {
+  font-size: 25px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr repeat(1, fit-content(50px));
+  grid-gap: 100px;
+  justify-content: right;
+  justify-items: start;
+  margin: 40px 70px 60px;
+  padding: 0px;
+}
+.navBttn,
+.navbar a {
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--main_color);
+  transition-duration: 0.3s;
+}
+
+.navbar li:hover,
+.navbar a :hover {
+  transform: scale(110%);
+}
+
+.welcome {
+  color: var(--main_color);
+  text-align: center;
+  font-size: 55px;
+  text-transform: capitalize;
+  animation: TransitionIn 1s;
+}
+
+@keyframes TransitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
